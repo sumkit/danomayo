@@ -31,10 +31,10 @@
   height: 100%;
 }
 
-#about-me, .navbar-brand {
-  font-family: "Pacifico", sans-serif;
+.title {
+  font-family: "Major Mono Display", sans-serif;
 }
 
-body {
-  font-family: "Asap", sans-serif;
+.heading, .navbar-brand {
+  font-family: "Pacifico", sans-serif;
 }

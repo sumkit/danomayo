@@ -18,6 +18,11 @@ $(document).ready(function() {
   $("#instagram-placeholder").load("instagram.html");
   $("#contact").load("contact.html");
 
+  if ($("#blur-nav-placeholder").length) {
+  	 $("#blur-nav-placeholder").load("blur_nav.html");
+  	 scrollBlurNavBar();
+  }
+
   var width = $( window ).width();
   var height = $( window ).height();
   var max = Math.max(width, height);
@@ -30,3 +35,15 @@ $(window).resize(function(){
   var height = $( window ).height();
   styleGrid(width < height);
 });
+
+function scrollBlurNavBar() {
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+	  if (window.pageYOffset > $("#blur-navbar").height()) {
+	    $("#blur-navbar").fadeOut();
+	  } else {
+	  	console.log("hisdf");
+	    $("#blur-navbar").fadeIn();
+	  }
+	}
+}
